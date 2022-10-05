@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="icon" href="relogio.png">
+</head>
+<body>
+    <!--Circulos-->
+    <div class="main-container center">
+        <div class="circulo-container center">
+            <div class="semicirculo"></div>
+            <div class="semicirculo"></div>
+            <div class="semicirculo"></div>
+            <div class="circulo-exterior"></div>
+        </div>
+    <!--Timer-->
+        <div class="timer-container center">
+            <div class="timer center"></div>
+        </div>
+    </div>
+            <div class="inputBox">
+                <input type="number" id="hora1" required="required">
+                <span>HORA</span>
+                <i></i>
+                </div>
+                <div class="inputBox">
+                <input type="number" id="min1" required="required">
+                <span>MINUTO</span>
+                <i></i>
+                </div>
+                <div class="inputBox">
+                <input type="number" id="seg1" required="required">
+                <span>SEGUNDO</span>
+                <i></i>
+                </div>
+            </div>
+    <div class="">  
+        <button type="button" class="icon__btn icon__btn--start" id="botao"><span class="material-icons">play_arrow</span>
+        <button type="button" class="icon__btn icon__btn--pause" id="pausa"><span class="material-icons">pause</span>
+        <button type="button" class="icon__btn icon__btn--reset" id="reset"><span class="material-icons" >timer</span>
+        </button>
+    </div>   
+    <script src="programa.js" ></script>
+</body>
+</html>

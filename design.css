@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html
+{
+    font-family:'Heebo', sans-serif;
+
+}
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap:30px;
+    background:#222;
+}
+.center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    background-color: #222;
+}
+
+/* Input design */
+.inputBox{
+    position: relative;
+    width: 250px;
+}
+.inputBox input
+{
+    width: 100%;
+    background-color: transparent;
+    color:#fff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    padding: 10px 0 5px;
+}
+.inputBox span
+{
+    position:absolute;
+    left: 0;
+    padding: 10px 0 5px;
+    color:rgb(255, 255, 255,0.5);
+    text-transform: uppercase;
+    pointer-events: none;
+    letter-spacing: 0.1em;
+    transition:0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #2196f3;
+    transform: translateY(-16px);
+    font-size: 0.65em;
+}
+.inputBox i 
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.inputBox i::before
+{
+    content: '';
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(90deg,#ff1b69, #ff0, #2196f3,#9c27b0,#ff1b69);
+    animation: animate 2s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position-x: 0;
+    }
+    100%
+    {
+        background-position-x: 250px;
+    }
+}
+/* Botoes - Input */
+.icon{
+    display: inline-block;
+    padding: 24px 32px;
+    border-radius: 30px;
+    background:#088b8b9d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon__btn{
+    width: 50px;
+    height: 50px;
+    margin-left: 16px;
+    border-radius: 50%;
+    border: none;
+    color:white ;
+    background: #7914a1f8;
+}
+.icon__btn--start{
+    background:rgb(38, 143, 52);
+}
+.icon__btn--pause{
+    background:rgb(187, 20, 20);
+}
+
+/*Circulo*/
+
+.circulo-container{
+    width: 400px;
+    height: 400px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+.semicirculo{
+    width:50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+}
+.semicirculo:nth-child(1) {
+
+    background-color: #088b8b;
+    z-index: 2;
+}
+.semicirculo:nth-child(2){
+    background-color: #088b8b;
+    z-index: 3;
+}
+.semicirculo:nth-child(3){
+    background-color: #ddd;
+    z-index: 4;
+}
+.circulo-exterior{
+    width:390px;
+    height: 390px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 5;
+    
+}
+
+/* Timer */
+.timer-container{
+    width: 330px;
+    height: 200px;
+    z-index: 6;
+}
+.timer{
+    width: 400px;
+    height: 100px;
+    z-index: 7;
+}
+.timer div{
+    font-size: 70px;
+    font-weight: 100;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 0 10px;
+}
+.timer .colon{
+    background-color: transparent;
+    width: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 15px;
+}
